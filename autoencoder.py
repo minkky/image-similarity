@@ -28,9 +28,13 @@ x_test = x_train[1:15][:][:]
 x_test = np.array(x_test)
 
 model = Sequential()
-encoded = LSTM(10, input_shape=(299, 3), activation='relu', return_sequences = True)
+encoded = LSTM(256, input_shape=(299, 3), activation='relu', return_sequences = True)
 model.add(encoded)
 model.add(Dropout(0.5))
+model.add(LSTM(128, activation='relu', return_sequences = True))
+model.add(LSTM(64, activation='relu', return_sequences = True))
+model.add(LSTM(32, activation='relu', return_sequences = True))
+
 #model.add(Dense(1))
 #model.add(Activation('relu'))
 decoded = LSTM(3, return_sequences = True)
@@ -38,8 +42,8 @@ model.add(decoded)
 
 model.compile(optimizer='adam', loss='binary_crossentropy')
 model.fit(x_train, x_train, 
-          nb_epoch=50,
-          batch_size=50,
+          nb_epoch=100,
+          batch_size=100,
           shuffle=False,
           validation_data=(x_test, x_test))
 
