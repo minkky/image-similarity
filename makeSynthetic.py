@@ -2,8 +2,8 @@ import os, random, scipy.misc
 import numpy as np
 from PIL import Image
 
-path = 'make/'
-savepath = 'makes/'
+path = 'train/'
+savepath = 'trains/'
 
 def load_data():
 	dataset = []
