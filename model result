@@ -1,0 +1,13 @@
+# conv2d(32, (3, 3)), conv2d(64, (3, 3)), maxpool(2 ,2), drop(0.25), flat, dense(128), drop(0.25), dense(6, softmax)
+# loss_func = losses.categorical_crossentropy, optimizer = Adadelta
+Test loss: 1.2902624821662902
+Test accuracy: 0.813333334128062
+
+# conv2d(32, (3, 3)), conv2d(64, (3, 3)), maxpool(2 ,2), flat, dense(128), dense(6, softmax)
+# loss_func = losses.categorical_crossentropy, optimizer = Adadelta
+Test loss: 1.4201194127400716
+Test accuracy: 0.8300000007947286
+
+
+# conv2d(32, (3, 3)), conv2d(64, (3, 3)), maxpool(2 ,2), activ(relu) flat, dense(128), dense(6, softmax)
+# loss_func = losses.categorical_crossentropy, optimizer = Adadelta
