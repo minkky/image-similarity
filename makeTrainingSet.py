@@ -30,12 +30,12 @@ def addNoise():
 		picture = np.array(picture)
 		scipy.misc.imsave(savepath+file, picture)
 
-path = 'train/'
-savepath = 'trains/'
+path = 'val/'
+savepath = 'vals/'
 label = ["circle", "square", "triangle", "horizontal", "vertical", "diagonal"]
 
 for j in range(0, 6):
-	for i in range(0, 150):
+	for i in range(0, 100):
 		win = pg.display.set_mode((width, height))
 		win.fill(white)
 		if j == 0:

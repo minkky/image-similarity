@@ -64,11 +64,11 @@ x = Conv2D(16, (3, 3), activation='relu', padding='same')(x)
 x = MaxPooling2D((2, 2), padding='same')(x)
 x = Conv2D(8, (3, 3), activation='relu', padding='same')(x)
 x = Dropout(0.25)(x)
-x = Dense(8)(x)
-x = Dropout(0.25)(x)
 #x = MaxPooling2D((2, 2), padding='same')(x)
 x = Conv2D(8, (3, 3), activation='relu', padding='same')(x)
 encoded = MaxPooling2D((2, 2), padding='same')(x)
+
+#encoded = Dense()(x)
 
 x = Conv2D(32, (3, 3), activation='relu', padding='same')(encoded)
 x = UpSampling2D((2, 2))(x)
