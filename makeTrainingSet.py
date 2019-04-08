@@ -4,7 +4,7 @@ import os, random, scipy.misc
 import numpy as np
 from PIL import Image
 
-white = (255, 255, 255)
+background = (200, 200, 200)
 width = 28
 height = 28
 
@@ -37,7 +37,7 @@ label = ["circle", "square", "triangle", "horizontal", "vertical", "diagonal"]
 for j in range(0, 6):
 	for i in range(50, 100):
 		win = pg.display.set_mode((width, height))
-		win.fill(white)
+		win.fill(background)
 		if j == 0:
 			if random.choice([1, -1]) == 1:
 				first = random.randint(2, 25)
@@ -103,4 +103,4 @@ for j in range(0, 6):
 		#pg.display.flip()
 pg.quit()
 
-addNoise()
+#addNoise()
