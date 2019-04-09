@@ -4,7 +4,7 @@ import os, random, scipy.misc
 import numpy as np
 from PIL import Image
 
-background = (200, 200, 200)
+background = (230, 230, 230)
 width = 28
 height = 28
 
@@ -30,12 +30,12 @@ def addNoise():
 		picture = np.array(picture)
 		scipy.misc.imsave(savepath+file, picture)
 
-path = './dataset/original/test/'
-savepath = './dataset/tests/'
+path = './dataset/tests/'
+#savepath = './dataset/tests/'
 label = ["circle", "square", "triangle", "horizontal", "vertical", "diagonal"]
 
 for j in range(0, 6):
-	for i in range(50, 100):
+	for i in range(100, 150):
 		win = pg.display.set_mode((width, height))
 		win.fill(background)
 		if j == 0:
