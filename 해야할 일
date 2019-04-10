@@ -16,3 +16,8 @@
 
 strategy1. 기존 방법 그대로 진행. 2nd 방법. 근데 왜 64인지 한 번 확인
 strategy2. 아영이가 발표한 논문 다시 확인해서 GAP 방법 구현해보기, 채널 수 = vector의 크기 로 dense layer 대신 대체해서 코드짜기.
+
+2019.04.10
+- 학부 수업 데이터 마이닝 툴 찾아보기
+- Dense model, GAP model 성능 뽑기
+- output layer length = 64로 고정
